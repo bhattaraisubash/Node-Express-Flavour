@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <title>Node-Express-Flavour</title>
+        <style>
+            h1.welcome{
+                text-align: center;
+                color: #ff0000;
+            }
+
+            form{
+                margin: 0 auto;
+                padding: 15px;
+                width: 33%;
+                border: 1px solid #ddd;
+            }
+
+            form input{
+                display: block;
+                margin: 10px;
+                padding: 5px;
+            }
+
+            .btn-login{
+                background: #008000;
+                color: #fff;
+                padding: 8px 20px;
+                border: none;
+            }
+            .btn-login:hover{
+                background: #ff0000;
+            }
+        </style>
+    </head>
+    <body>
+        <h1 class="welcome">Welcome to Node-Express-Flavour</h1>
+        <div class="wrapper">
+            <form action="/login" method="post">
+                <input type="text" name="username" value="" placeholder="username">
+                <input type="password" name="password" value="" placeholder="password">
+                <input type="submit" class="btn-login" name="submit" value="Login">
+            </form>
+        </div>
+    </body>
+</html>
