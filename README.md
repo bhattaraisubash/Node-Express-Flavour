@@ -1,4 +1,8 @@
 # Node-Express-Flavour
+### included packages
+#### express ``` npm install express --save ```
+#### multer ``` npm install multer --save ```
+#### body-parser ``` npm install body-parser --save ```
 
 ## 1. simple.js
 simple nodejs express server example.displays working message.
