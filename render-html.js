@@ -15,8 +15,8 @@ var urlencodedParser = bodyParser.urlencoded({extended: false});
 
 app.use(express.static('public'));
 
-app.get('/', function(req, res){
-    res.sendFile(__dirname+"/index.html");
+app.get(['/', '/login'], function(req, res){
+    res.sendFile(__dirname + "/public/login.html");
 })
 
 app.post('/login', urlencodedParser, function(req, res){

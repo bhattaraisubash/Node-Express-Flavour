@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>Node-Express-Flavour</title>
+    <style>
+        form{
+                margin: 0 auto;
+                width: 33%;
+                padding 15px;
+                border: 1px solid #ddd;
+            }
+            form p{
+                color: #ff0000;
+                margin: 10px;
+            }
+            input{
+                margin: 10px;
+                padding 5px;
+            }
+
+            .image-container{
+                width: 30%;
+                margin: 0 auto;
+                padding: 20px;
+            }
+        </style>
+</head>
+
+<body>
+    <div class="wrapper">
+        <form action="/upload" method="post" enctype="multipart/form-data">
+            <% if (typeof message != 'undefined'){ %>
+            <p>
+                <%= message %>
+            </p>
+            <% } %>
+            <input type="file" name="image" size="50"><br/>
+            <input type="submit" name="submit" value="Submit">
+            </form>
+
+            <div class="image-container">
+                <img src="<%= typeof file != 'undefined' ? file : '' %>" alt="">
+            </div>
+            </div>
+</body>
+
+</html>
